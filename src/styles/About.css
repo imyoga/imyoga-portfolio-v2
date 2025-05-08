@@ -1,0 +1,84 @@
+@import url('../App.css');
+
+.container-about-background {
+	height: calc(100vh - 3.5rem);
+	width: 100%;
+	/* border: 5px solid black; */
+
+	background-image: var(--bg-gradient);
+	box-shadow: var(--box-shadow-black);
+}
+
+.container-about {
+	/* border: 5px solid red; */
+	display: block;
+	margin-inline: auto;
+
+	height: 100%;
+	width: 50vw;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	row-gap: 2rem;
+
+	padding-bottom: 2rem;
+}
+
+.container-about h2 {
+	font-size: 3rem;
+	text-shadow: var(--text-shadow-dark);
+	color: var(--text);
+
+	transition: transform 0.4s;
+}
+
+.card-about {
+	background-color: var(--card-bg);
+	box-shadow: var(--box-shadow);
+	border-radius: 0.5rem;
+	padding: 1rem;
+}
+
+.container-about p {
+	margin-block: 1.5rem;
+	font-size: 1.5rem;
+	font-weight: 500;
+	text-align: justify;
+}
+.container-about span {
+	text-decoration: underline;
+}
+
+@media (max-width: 1300px) {
+	.container-about-background,
+	.container-about {
+		height: min(max-content, calc(100vh - 3.5rem));
+		padding-block: 2rem;
+	}
+}
+
+@media (max-width: 1200px) {
+	.container-about {
+		height: 100%;
+		width: 80vw;
+	}
+}
+
+@media (max-width: 700px) {
+	.container-about-background,
+	.container-about {
+		height: max-content;
+		padding-block: 2rem;
+	}
+
+	.container-about {
+		/* background-color: aqua; */
+		width: 90vw;
+		padding-top: 0;
+	}
+	.container-about p {
+		font-size: 1.2rem;
+	}
+}

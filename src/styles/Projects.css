@@ -1,0 +1,37 @@
+@import url('../App.css');
+
+.container-projects {
+	/* outline: 1px solid grey; */
+	/* background-color: yellowgreen; */
+	/* border: 5px solid purple; */
+
+	max-width: 70vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	row-gap: 8vh;
+	padding-block: 10vh;
+}
+.title-work {
+	font-size: 3rem;
+	text-shadow: var(--text-shadow-dark);
+	transition: transform 0.4s;
+	color: var(--text);
+}
+.title-work:hover {
+	transform: scale(1.01, 1.01);
+}
+.description-work {
+	font-size: 1.8rem;
+	margin-inline: 10px;
+}
+
+@media (max-width: 700px) {
+	.container-projects {
+		/* background-color: blue; */
+		/* width:%;   */
+		max-width: 100%;
+		text-align: center;
+	}
+}

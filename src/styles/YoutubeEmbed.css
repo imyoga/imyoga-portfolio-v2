@@ -1,0 +1,13 @@
+@import url('../App.css');
+
+.embed-youtube *{
+    border: 5px solid #1d2025;  
+    border-radius: 5px;  
+}
+
+@media (max-width:700px){
+  iframe{
+    width: 300px;
+    height: 168.75px;
+  }
+}

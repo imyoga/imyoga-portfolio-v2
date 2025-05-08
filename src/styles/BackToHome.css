@@ -1,0 +1,33 @@
+@import url('../App.css');
+
+
+/* .container-back-to-home {
+  border: 5px solid black;
+} */
+
+.container-back-to-home * {  
+  display: block;
+  text-align: center;
+  margin-inline: auto;
+  color: var(--bg);
+  font-size: 1.5rem;
+}
+
+.icon-home {
+  text-decoration: none;
+  font-size: 4rem;
+}
+
+.container-link {
+  height: 7rem;
+  width: 10rem;
+  
+  transition: transform 0.5s;
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+
+
+}
+.container-link:active {
+  box-shadow: var(--box-shadow-accent);
+}

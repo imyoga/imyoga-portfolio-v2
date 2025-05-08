@@ -1,0 +1,138 @@
+@import url('../App.css');
+
+/* .flex-item {
+  border: 5px solid black;
+} */
+
+* {
+	text-decoration: none;
+}
+.container-navbar {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+
+	background: var(--nav-bg);
+	color: var(--nav-text);
+	width: 100%;
+	height: 3.5rem;
+	font-size: 1.4rem;
+	font-weight: 600;
+
+	box-shadow: var(--box-shadow-black);
+	transition: transform 0.5s;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.burger-icon {
+	display: none;
+}
+
+.container-navlinks,
+.container-mobile-nav {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.nav-link:hover {
+	color: var(--accent);
+	cursor: pointer;
+}
+
+/* Link animation hover  */
+.nav-link {
+	margin-inline: 20px;
+	display: inline-block;
+	position: relative;
+	color: var(--nav-text);
+}
+
+.nav-link:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: var(--accent);
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
+}
+
+.nav-link:hover:after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+}
+/* End */
+
+.nav-install {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.download-icon {
+	font-size: 1rem;
+}
+
+/* //////////////////////////////////////////////////////////////////// */
+@media (max-width: 700px) {
+	#modal-navlinks,
+	.container-mobile-nav {
+		z-index: 10;
+	}
+
+	.container-navlinks {
+		display: none;
+	}
+	.container-mobile-nav {
+		width: 100%;
+		padding-inline: 1.6rem;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 1.8rem;
+	}
+	.burger-icon {
+		display: inline;
+	}
+
+	#modal-navlinks {
+		position: absolute;
+		top: 3.5rem;
+		width: 100%;
+		height: calc(100vh - 3.5rem);
+		padding-top: 20px;
+
+		background-color: var(--nav-bg);
+		font-size: 1.8rem;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		row-gap: 4vh;
+	}
+
+	.container-navlinks div {
+		/* outline: 1px solid black; */
+		margin: 0;
+		padding: 10px;
+		align-self: stretch;
+		text-align: center;
+		box-shadow: var(--box-shadow-black);
+	}
+
+	.nav-install {
+		justify-content: center;
+	}
+}

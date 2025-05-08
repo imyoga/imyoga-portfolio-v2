@@ -1,0 +1,132 @@
+@import url('../App.css');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+.container-hero * {
+	/* outline: 1px solid grey; */
+}
+
+.container-hero {
+	/* border: 10px solid purple; */
+	height: calc(100vh - 3.5rem);
+	/* box-shadow: var(--box-shadow-accent); */
+
+	font-size: 2.5rem;
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-shadow: var(--box-shadow-black);
+}
+.container-hero > div {
+	/* background-color: blue; */
+	/* border: 1px solid red; */
+	display: block;
+	text-align: center;
+}
+
+.hero-titles {
+	margin-top: 5rem;
+}
+.title-heading {
+	/* border: 1px solid blue; */
+	margin-top: 5rem;
+}
+
+.name-heading {
+	/* Order of the below code matters */
+	background: var(--linear-gradient-text);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	font-family: 'Dancing Script';
+	font-size: 4rem;
+	font-weight: 900;
+
+	animation: fadeInAnimation ease 3s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+.avatar {
+	position: absolute;
+	bottom: 2rem;
+	order: 1;
+}
+
+.hero-background {
+	background-color: var(--nav-bg);
+
+	width: 100%;
+	height: 9rem;
+
+	position: absolute;
+	bottom: 0;
+}
+
+/* Animation Heading Name  */
+@keyframes fadeInAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+/* Animation Heading Name End */
+
+/* Animation Heading Avatar */
+
+.avatar {
+	animation: fadeInLeft 2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeInLeft {
+	0% {
+		opacity: 0.5;
+		transform: translateX(50vw);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+/* Animation Heading Avatar End */
+
+@media (max-width: 700px) {
+	/* .container-hero * {
+    border: 5px solid yellow; 
+  } */
+	.container-hero * {
+		font-size: 2rem;
+	}
+	.hero-titles {
+		position: absolute;
+		bottom: 18rem;
+	}
+	.name-heading {
+		display: block;
+		margin-top: 1rem;
+		font-size: 3rem;
+	}
+	.title-heading {
+		font-size: 1.8rem;
+		margin-top: 2rem;
+		margin-inline: 1rem;
+	}
+	.avatar {
+		scale: 0.75;
+	}
+
+	@keyframes fadeInLeft {
+		0% {
+			opacity: 0.5;
+			transform: translateX(50px);
+		}
+		100% {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+}

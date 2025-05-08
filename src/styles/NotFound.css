@@ -1,0 +1,35 @@
+@import url('../App.css');
+
+.container-not-found {
+  /* border: 5px solid black; */
+  height: calc(100vh);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-not-found {
+  scale: 0.5;
+
+  box-shadow: var(--box-shadow-accent);
+  border-radius: 15px;
+  border: 1px solid var(--bg);
+}
+.container-not-found h2 {
+  transform: translateY(-3rem);
+  font-size: 3rem;
+  margin-top: 0;
+}
+
+@media (max-width: 700px) {
+  .image-not-found {
+    scale: 0.4;
+  }
+  .container-not-found h2 {
+    transform: translateY(-4rem);
+    font-size: 2rem;
+    margin-top: 0;
+  }
+}

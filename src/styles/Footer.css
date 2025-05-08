@@ -1,0 +1,53 @@
+@import url('../App.css');
+
+.container-footer {
+	/* border: 5px solid black; */
+	height: 25vh;
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	row-gap: 25px;
+
+	background-color: var(--footer-bg);
+
+	color: var(--footer-accent);
+	box-shadow: var(--box-shadow-black);
+}
+
+.container-social-links {
+	width: 300px;
+	/* outline: 5px solid black; */
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.container-social-links a {
+	text-decoration: none;
+	color: var(--footer-accent);
+	font-size: 2rem;
+	margin-inline: 2rem;
+	transition: transform 0.5s;
+}
+.container-social-links a:hover {
+	transform: scale(1.1, 1.1);
+	color: var(--accent);
+}
+
+.container-footer-notes {
+	/* border: 5px solid black; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	row-gap: 0.5rem;
+	font-size: 0.8rem;
+	font-style: italic;
+}
+
+@media (max-width: 700px) {
+}

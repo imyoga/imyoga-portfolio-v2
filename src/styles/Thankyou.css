@@ -1,0 +1,27 @@
+@import url('../App.css');
+
+.container-thankyou > *{
+   display: block;
+   text-align: center;
+   margin-inline: auto;
+   margin-block: 2rem;
+}
+.container-thankyou{
+    display: block;
+    margin-top: 3rem;
+    
+}
+
+
+/* Aspect Ratio: 1.13960 */
+.image-message-sent{
+    height: 10rem;
+    width: calc(10rem * 1.13960);
+}
+
+.container-thankyou > p{
+    font-size: 2rem;
+}
+.container-thankyou > h2{
+    font-size: 3rem;
+}

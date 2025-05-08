@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- PWA primary color -->
+		<meta name="theme-color" content="#1d2025" />
+
+		<!-- PWA meta tags -->
+		<meta name="description" content="Portfolio created by React" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="apple-mobile-web-app-title" content="Portfolio_YM" />
+
+		<!-- PWA icon links -->
+		<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+		<link
+			rel="apple-touch-icon"
+			sizes="152x152"
+			href="/icons/apple-touch-icon-152x152.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/icons/apple-touch-icon-180x180.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="167x167"
+			href="/icons/apple-touch-icon-152x152.png"
+		/>
+
+		<!-- PWA manifest -->
+		<link rel="manifest" href="/manifest.json" />
+
+		<title>Portfolio_YM</title>
+
+		<!-- Google tag (gtag.js) -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-WPQQL1C582"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || []
+			function gtag() {
+				dataLayer.push(arguments)
+			}
+			gtag('js', new Date())
+
+			gtag('config', 'G-WPQQL1C582')
+		</script>
+	</head>
+	<body>
+		<div id="root"></div>
+		<script type="module" src="/src/main.jsx"></script>
+
+		<!-- PWA prompt for Safari -->
+		<script>
+			if (window.navigator && window.navigator.standalone) {
+				// iOS in standalone mode
+				document.addEventListener(
+					'touchend',
+					function (event) {
+						const element = event.target
+						if (element.nodeName === 'A' && element.getAttribute('href')) {
+							const url = element.getAttribute('href')
+							if (
+								url.startsWith('/') ||
+								url.startsWith(window.location.origin)
+							) {
+								event.preventDefault()
+								window.location.href = url
+							}
+						}
+					},
+					false
+				)
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+@import url('../App.css');
+
+.container-light-mode {
+	width: 2.5rem;
+	height: 2.5rem;
+	font-size: 2.3rem;
+
+	float: right;
+	position: fixed;
+	right: 10px;
+
+	top: 10vh;
+	color: var(--text);
+
+	text-align: center;
+
+	border-right: none;
+	rotate: -45deg;
+	transition: all 0.5s ease;
+	z-index: 1000;
+}
+
+.container-light-mode:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+	color: var(--accent);
+}
+
+.container-light-mode:active {
+	color: var(--accent);
+	cursor: pointer;
+	transform: scale(1.1);
+}
+
+.icon-light-mode {
+	transition: all 0.3s ease;
+}

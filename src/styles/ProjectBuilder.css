@@ -1,0 +1,128 @@
+@import url('../App.css');
+
+.container-project-card * {
+  list-style-type: none;
+}
+
+.container-project-card {
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  background-color: var(--card-bg);
+  color:var(--card-text);
+  box-shadow: var(--box-shadow-black);
+  border: 1px solid var(--bg);
+  border-radius: 10px;
+
+  transition: transform 0.4s;
+}
+
+.title-work:hover {
+  transform: scale(1.01, 1.01);
+}
+
+.container-project-details {
+  display: block;
+  text-align: left;
+  margin-right: 10px;
+}
+
+.container-project-details > * {
+  margin-left: 15px;
+  margin-block: 15px;
+}
+.project-title {
+  font-size: 2rem;
+}
+
+ul.container-project-technologies {
+  max-width: 40ch;
+  display: inline-flex;
+  flex-wrap: wrap;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 10px;
+  margin-block: 5px;
+}
+
+ul.container-project-technologies li {
+  border: 2px solid var(--bg);
+  margin: 5px;
+  border-radius: 5px;
+  padding-block: 1px;
+  padding-inline: 4px;
+  background-color: var(--accent);
+  color: var(--button-text);
+}
+
+.container-project-collobraters {
+  font-style: italic;
+}
+.container-project-collobraters span {
+  font-style: normal;
+  font-weight: 600;
+}
+.project-description {
+  max-width: 50ch;
+  font-weight: 500;
+}
+.project-notes {
+  max-width: 50ch;
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+.container-urls a {
+  color: var(--accent);
+  font-size: 1.2rem;
+
+  border-radius: 5px;
+  padding-inline: 8px;
+  text-decoration: none;
+  margin-right: 10px;
+  font-weight: 700;
+}
+.container-urls a:hover {
+  color: var(--button-bg);
+}
+
+.container-urls,
+.container-youtube {
+  transition: transform 0.4s;
+}
+.container-urls:hover,
+.container-youtube:hover {
+  transform: scale(1.01, 1.01);
+}
+
+.container-youtube {
+  margin-right: 20px;
+  flex: 40%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4px;
+  transition: transform 0.6s;
+}
+
+@media (max-width: 900px) {
+  .container-project-card {
+    display: block;
+    width: 90vw;
+  }
+
+  .container-youtube {
+    margin: auto;
+    display: block;
+    text-align: center;
+  }
+}
+@media (max-width: 700px) {
+  .container-project-details {
+    align-self: center;
+    text-align: center;
+  }
+}

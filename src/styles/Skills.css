@@ -1,0 +1,119 @@
+@import url('../App.css');
+/* .container-skills *{
+  outline: 1px solid yellow;
+} */
+.container-skills * {
+	list-style-type: none;
+}
+.container-skills {
+	/* border: 5px solid white;
+   */
+
+	height: calc(100vh - 3.5rem);
+	width: 100%;
+	box-shadow: var(--box-shadow-black);
+
+	background-color: var(--nav-bg);
+	color: var(--text);
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.title-skill {
+	font-size: 3rem;
+	text-shadow: var(--text-shadow-dark);
+	transition: transform 0.4s;
+}
+.title-skill:hover {
+	transform: scale(1.01, 1.01);
+}
+.title-quote {
+	font-style: italic;
+	font-size: 1.8rem;
+}
+
+.container-cards-skills {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.card-skills {
+	background-color: var(--card-bg);
+	box-shadow: var(--box-shadow-black);
+
+	border: 1px solid var(--bg);
+	border-radius: 10px;
+
+	margin-inline: 20px;
+
+	height: 20rem;
+	width: 23rem;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	padding: 0;
+	row-gap: 2rem;
+
+	transition: transform 0.4s;
+}
+.card-skills:hover {
+	transform: scale(0.99, 0.99);
+}
+
+.title-card {
+	font-weight: 700;
+	font-size: 1.5rem;
+	margin-top: 15px;
+}
+
+.container-skill-items {
+	/* background-color: #f05454; */
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding: 5px;
+	row-gap: 2rem;
+	height: 60%;
+	width: 90%;
+}
+
+.container-skill-name-image {
+	/* background-color: white;
+  outline: 1px solid grey; */
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	width: max-content;
+	flex: 1 0 30%;
+}
+
+@media (max-width: 700px) {
+	.container-skills {
+		height: max-content;
+		padding-block: 2rem;
+	}
+
+	.container-cards-skills {
+		margin-top: 10px;
+		display: flex;
+		flex-direction: column;
+		row-gap: 5vh;
+	}
+	.title-quote {
+		text-align: center;
+		margin-top: 10px;
+	}
+	.card-skills {
+		width: 90vw;
+	}
+}
