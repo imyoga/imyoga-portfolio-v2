@@ -28,6 +28,17 @@
 	align-items: center;
 }
 
+.logo-container {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.nav-logo {
+	font-size: 1.2rem;
+	color: var(--accent);
+}
+
 .burger-icon {
 	display: none;
 }
@@ -45,12 +56,29 @@
 	cursor: pointer;
 }
 
+.nav-link.active {
+	color: var(--accent);
+}
+
+.nav-link.active:after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+}
+
+.nav-icon {
+	font-size: 1rem;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
 /* Link animation hover  */
 .nav-link {
-	margin-inline: 20px;
-	display: inline-block;
+	margin-inline: 15px;
+	display: inline-flex;
+	align-items: center;
 	position: relative;
 	color: var(--nav-text);
+	transition: color 0.2s ease;
 }
 
 .nav-link:after {
@@ -59,7 +87,7 @@
 	width: 100%;
 	transform: scaleX(0);
 	height: 2px;
-	bottom: 0;
+	bottom: -2px;
 	left: 0;
 	background-color: var(--accent);
 	transform-origin: bottom right;
@@ -72,17 +100,30 @@
 }
 /* End */
 
+.nav-divider {
+	height: 24px;
+	width: 1px;
+	background-color: var(--text);
+	opacity: 0.3;
+	margin: 0 5px;
+}
+
+.external-link {
+	position: relative;
+}
+
 .nav-install {
 	display: flex;
 	align-items: center;
 	gap: 6px;
 }
 
-.download-icon {
+.download-icon,
+.tools-icon {
 	font-size: 1rem;
 }
 
-/* //////////////////////////////////////////////////////////////////// */
+/* Mobile styles */
 @media (max-width: 700px) {
 	#modal-navlinks,
 	.container-mobile-nav {
@@ -104,6 +145,13 @@
 	}
 	.burger-icon {
 		display: inline;
+		cursor: pointer;
+		transition: transform 0.3s ease;
+	}
+
+	.burger-icon:hover {
+		transform: scale(1.1);
+		color: var(--accent);
 	}
 
 	#modal-navlinks {
@@ -114,22 +162,50 @@
 		padding-top: 20px;
 
 		background-color: var(--nav-bg);
-		font-size: 1.8rem;
+		font-size: 1.6rem;
 
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: flex-start;
-		row-gap: 4vh;
+		row-gap: 3vh;
+
+		animation: slideIn 0.3s ease-out forwards;
+	}
+
+	@keyframes slideIn {
+		from {
+			opacity: 0;
+			transform: translateY(-10px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
 	}
 
 	.container-navlinks div {
-		/* outline: 1px solid black; */
 		margin: 0;
-		padding: 10px;
-		align-self: stretch;
+		padding: 8px;
+		width: 90%;
+		align-self: center;
 		text-align: center;
-		box-shadow: var(--box-shadow-black);
+		border-radius: 8px;
+		transition: background-color 0.2s ease;
+	}
+
+	.container-navlinks div:hover {
+		background-color: rgba(255, 255, 255, 0.05);
+	}
+
+	.nav-link {
+		justify-content: center;
+	}
+
+	.nav-divider {
+		width: 90%;
+		height: 1px;
+		margin: 5px 0;
 	}
 
 	.nav-install {
